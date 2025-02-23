@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Collaborative Whiteboard</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 1px solid black; cursor: crosshair; }
+        #controls { margin: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Realtime Collaborative Whiteboard</h2>
+    <div id="controls">
+        <input type="color" id="colorPicker" value="#000000">
+        <input type="range" id="brushSize" min="1" max="10" value="4">
+        <button id="clearBtn">Clear Board</button>
+    </div>
+    <canvas id="whiteboard" width="800" height="500"></canvas>
+
+    <!-- Include the Socket.IO client library -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <!-- Include the client-side JavaScript -->
+    <script src="/client.js"></script>
+</body>
+</html>
